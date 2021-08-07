@@ -5,7 +5,6 @@
 local bundle = import 'lib/bundle.libsonnet';
 local k = import 'lib/karabiner.libsonnet';
 
-
 //------//
 // MAIN //
 //------//
@@ -191,38 +190,6 @@ local k = import 'lib/karabiner.libsonnet';
     k.rule('1 (Cmd) [Open Finder]',
            k.input('1', ['command']),
            k.outputShell('open -b com.apple.finder'),
-           k.condition('unless', bundle.standard)),
-    k.rule('2 (Cmd) [Open first pinned Dock app]',
-           k.input('2', ['command']),
-           k.runDockedApp('0'),
-           k.condition('unless', bundle.standard)),
-    k.rule('3 (Cmd) [Open second pinned Dock app]',
-           k.input('3', ['command']),
-           k.runDockedApp('1'),
-           k.condition('unless', bundle.standard)),
-    k.rule('4 (Cmd) [Open third pinned Dock app]',
-           k.input('4', ['command']),
-           k.runDockedApp('2'),
-           k.condition('unless', bundle.standard)),
-    k.rule('5 (Cmd) [Open fourth pinned Dock app]',
-           k.input('5', ['command']),
-           k.runDockedApp('3'),
-           k.condition('unless', bundle.standard)),
-    k.rule('6 (Cmd) [Open fifth pinned Dock app]',
-           k.input('6', ['command']),
-           k.runDockedApp('4'),
-           k.condition('unless', bundle.standard)),
-    k.rule('7 (Cmd) [Open sixth pinned Dock app]',
-           k.input('7', ['command']),
-           k.runDockedApp('5'),
-           k.condition('unless', bundle.standard)),
-    k.rule('8 (Cmd) [Open eighth pinned Dock app]',
-           k.input('8', ['command']),
-           k.runDockedApp('6'),
-           k.condition('unless', bundle.standard)),
-    k.rule('9 (Cmd) [Open ninth pinned Dock app]',
-           k.input('9', ['command']),
-           k.runDockedApp('7'),
            k.condition('unless', bundle.standard)),
     // Punctuation Keys
     k.rule('/ (Ctrl) [+Terminal Emulators]',
